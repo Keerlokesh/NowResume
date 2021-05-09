@@ -1,0 +1,66 @@
+{% extends 'NowOwnResume/Basic.html' %}
+
+{% block title %}Template NowResume{% endblock %}
+{% block css %}
+
+.sloganbtn{
+         height:60px; width:380px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtn:hover{
+         background-color:rgba(33,150,243,.15);
+         box-shadow:inset 0 0 0 1px #5cd65c;
+         color:#5cd65c;
+
+}
+.formsection{
+background: #f2f5fa;
+}
+
+.formbox{
+    width:400px;
+
+}
+label{
+    font-family: "Times New Roman", Times, serif;
+}
+.middleShow1{
+    padding:50px;
+}
+
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+<section class="middleShow1 formsection">
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="col-lg-12 col-sm-12">
+                    <img src="{{fname}}" alt="Resume" style="border:1px solid gray; width:380px; height:460px;  margin-top:50px;">
+                </div>
+                {{fname}}
+                <div class="col-lg-12 col-sm-12 " style="margin-top:50px;">
+                    <a href="{{fname}}" download><button class="sloganbtn">
+                        Download
+                    </button>
+                        </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+

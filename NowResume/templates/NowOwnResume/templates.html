@@ -1,0 +1,164 @@
+{% extends 'NowOwnResume/Basic.html' %}
+
+{% block title %}Template NowResume{% endblock %}
+{% block css %}
+
+.sloganbtn{
+         height:30px; width:90px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtn:hover{
+         background-color:rgba(33,150,243,.15);
+         box-shadow:inset 0 0 0 1px #5cd65c;
+         color:#5cd65c;
+
+}
+.formsection{
+background: #f2f5fa;
+}
+
+.formbox{
+    width:400px;
+
+}
+label{
+    font-family: "Times New Roman", Times, serif;
+}
+
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+<section class="middleShow1 formsection">
+        <div class="container">
+            <div class="row">
+                <div class=" ">
+                    <div class="img" style="margin-top:50px;">
+                        <h3>Choose your Template</h3>
+                    </div>
+                </div>
+                <div class="ResumeData">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume3.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Simple</h5>
+
+                                            <a href="simpleResume" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume2.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Basic</h5>
+
+                                            <a href="basictemplates" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume1.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Attractive</h5>
+
+                                            <a href="attractive" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume4.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Software Engg</h5>
+
+                                            <a href="softwareEngg" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/simpleNew.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Simple (NEW)</h5>
+
+                                            <a href="simpleNew" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume1.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Attractive</h5>
+
+                                            <a href="attractive" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/simpleNewest.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Simple (Newest)</h5>
+
+                                            <a href="simpleNewest" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume2.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Basic</h5>
+
+                                            <a href="basictemplates" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'ResumePics/resume1.png'%}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Attractive</h5>
+
+                                            <a href="attractive" ><button class="sloganbtn">Select </button></a>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+

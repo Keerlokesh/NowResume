@@ -1,0 +1,158 @@
+{% extends 'NowOwnResume/Basic.html' %}
+
+{% block title %}About{% endblock %}
+{% block css %}
+
+.middleShow31{
+    position:relative;
+    z-index:1;
+    background-color:rgba(23,88,4,.04);
+
+
+}
+.middleImage{
+    border:1px solid gray;
+    padding:50px;
+    width:320px;
+    height:450px;
+
+    background-color:#ffff99;
+
+}
+.middleImageInside{
+    padding:10px;
+    width:270px;
+    height:340px;
+    background-color:rgba(23,66,5,.16);
+    border-bottom:20px solid rgba(100,100,123,.40);
+    border-radius:20px;
+}
+.middleImageInside:hover{
+    box-shadow:1px 3px 35px gray;
+    border-color:#009999;
+}
+.LokeshIntro{
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.typewriter h3 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation-iteration-count:infinite;
+  animation:
+    typing 6.5s steps(30, end) infinite,
+    blink-caret .5s ease-in-out infinite;
+}
+.typewriter p {
+
+  animation-iteration-count:infinite;
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 6.5s steps(30, end) infinite,
+    blink-caret .5s step-end infinite alternate;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.LokeshAbout{
+    box-shadow:5px 2px 50px #ffff33;
+}
+
+.aa{
+    text-decoration:none;
+    color:green;
+    font-size:23px;
+}
+.aa:hover{
+    text-decoration:none;
+    color:gray;
+}
+.cont{
+    background:rgb(153, 255, 204,.05);
+    padding:60px;
+}
+
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+
+    <section class="middleShow3">
+        <div class="row middleShow31">
+
+            <div class="middleShowImg">
+
+
+                        <div class="d-flex justify-content-center border border-light p-5 row">
+                            <div style="margin-top:30px; margin-right:1px;" class="typewriter col-lg-4 col-sm-12">
+                            <h3 style="">Founder and CEO <br></h3>
+                                <p>Lokesh Keer</p>
+
+                            </div>
+                            <div class="col-lg-1 col-sm-12" style=" border-radius:20px;">
+               <img class="LokeshAbout" src="{% static 'NowOwnResume/Lokesh.jpg' %}" style="width:250px; height:320px; border-radius:30px; border:.2px solid gray;">
+
+                                </div>
+
+            </div></div>
+
+            <div class="row cont">
+                <div class="LokeshIntro">
+                    <div class="LokeshIntroduction1 container">
+                        <div class="LokeshIntroduction2 row" style="color:black; font-family: 'Times New Roman', Times, serif;">
+
+                        <div class="container">
+                        <p> I am Lokesh Keer , Student of Computer Science and Engineering.
+                            I am Full stack developer. I creates websites with Django technologies.
+                            I knows Core Java (JSE) , C , C++ , Python ,HTML ,CSS , JavaScript , Bootstrap.
+                            
+                            <br>I created <br>  <a href="https://keerlokesh.github.io/FriendshipBuzz.github.io/" class="aa"> LoveCalculator website</a>
+                            <br><a href="https://keerlokesh.github.io/Gun-Dekho.github.io/" class="aa">Gun Milan Website</a>
+
+                            <br><br>
+                            I create this Website for Resume making easier . Freshers
+                            faces some difficulties while creating Resume and sometimes
+                            it's hard to find best templates for attractive Resume.
+                            We have made many templates for your Resume and
+                            this templates make your Resume different from others.
+                            Get your Dream Job with likable Resume . Create your resume that different from all.
+
+                        </p>
+                            </div>
+                    </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+
+{% endblock %}
+{% block js %}{% endblock %}

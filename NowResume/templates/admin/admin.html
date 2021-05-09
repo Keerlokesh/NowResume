@@ -1,0 +1,95 @@
+{% extends 'admin/basic1.html' %}
+
+{% block title %}admin login NowResume{% endblock %}
+{% block css %}
+
+.sloganbtn{
+         height:30px; width:110px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtn:hover{
+         background-color:rgba(133, 137, 242,.15);
+         box-shadow:inset 0 0 0 1px #8589f2;
+         color:#60f0e9;
+
+}
+.formsection{
+background: #f2f5fa;
+}
+
+.formbox{
+    width:400px;
+
+}
+label{
+    font-family: "Times New Roman", Times, serif;
+}
+.admin_menu{
+    padding:80px;
+text-align:center;
+font-size:30px;
+border:0.2px solid gray;
+
+
+}
+.aa{
+text-decoration:none;
+color:gray;
+}
+.aa:hover{
+color:green;
+}
+.admin_panel{
+    text-decoration:underline;
+    margin-top:40px;
+    text-align:center;
+    background: #f2f5fa;
+    color:#60f0e9;
+}
+.s{
+    margin:10px;
+}
+.suggesstions{
+    background:skyblue;
+}
+.upload_templates{
+    background:#a6edd7;
+}
+.resume_details{
+    background:#90f5bc;
+}
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+<section class="middleShow1 formsection">
+        <div class="container">
+            <div class="admin_panel">
+                <h1> Admin Panel </h1>
+            </div>
+            <div class="row">
+                <div class="admin_menu">
+                    <div class="suggesstions s">
+                        <a class="aa" href="viewSuggesstion">View Suggesstions</a>
+                    </div>
+                    <div class="upload_templates s">
+                        <a class="aa" href="uploadTemplate">Upload Templates</a>
+                    </div>
+                    <div class="resume_details s">
+                        <a class="aa" href="viewResumes">View Resume Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'NowOwnResume/Basic.html' %}
+
+{% block title %}Donate{% endblock %}
+{% block css %}
+
+.top{
+
+    background:#c2f0f0;
+
+}
+p{font-family:courier,arial,helvetica;}
+
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+
+
+
+<section class="middleShow1 topp">
+        <div class="container top">
+            <div class="row">
+                <div class=" col-lg-6 col-md-8 col-sm-12">
+                    <div class="img">
+                        <img src="{% static 'NowOwnResume/Lokesh_QR.jpg' %}" style="width:90%; height:100%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-12">
+                    <div class="slogan" style="padding:120px;">
+                        <h1 style="font-family:courier,arial,helvetica;">Paytm</h1>
+                        <p style="font-size:25px;"> Donate us that will help us to maintain this website further.
+                        <br><br><br>
+                        'Thank You'
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+    </section>
+
+
+{% endblock %}
+{% block js %}{% endblock %}

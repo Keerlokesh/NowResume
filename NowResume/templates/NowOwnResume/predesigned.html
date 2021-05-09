@@ -1,0 +1,74 @@
+{% extends 'NowOwnResume/Basic.html' %}
+
+{% block title %}Template NowResume{% endblock %}
+{% block css %}
+
+.sloganbtn{
+         height:35px; width:120px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtn:hover{
+         background-color:rgba(33,150,243,.15);
+         box-shadow:inset 0 0 0 1px #5cd65c;
+         color:#5cd65c;
+
+}
+.formsection{
+background: #f2f5fa;
+}
+
+.formbox{
+    width:400px;
+
+}
+label{
+    font-family: "Times New Roman", Times, serif;
+}
+
+{% endblock %}
+
+{% block body %}
+
+    {% load static %}
+<section class="middleShow1 formsection">
+        <div class="container">
+            <div class="row">
+                <div class=" ">
+                    <div class="img" style="margin-top:50px;">
+                        <h3>Choose your Template</h3>
+                    </div>
+                </div>
+                <div class="ResumeData">
+
+                    <div class="row">
+                        {% for t in template %}
+                        <div class="col-lg-3 col-md-4 col-sm-12 my-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="media/{{t.image}}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="media/{{t.templateFile}}" download=""><button class="sloganbtn">Download </button></a>
+                                    </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+

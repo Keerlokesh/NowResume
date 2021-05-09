@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+
+    <link rel="shortcut icon" href="{% static 'NowOwnResume/Logo.png' %}" />
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <style>
+.FooterLinks{
+    color:#130d06;
+    text-decoration:none;
+}
+.FooterLink{
+    color:#130d06;
+    text-decoration:none;
+}
+.FooterLink:hover{
+    background-color:rgba(33,150,243,.15);
+    box-shadow:inset 0 0 0 1px #33ff33;
+    border:1px solid #33ff33;
+    color:#00cc00;
+}
+.FooterLinks:hover{
+    font-size:17px;
+    color:#130d06;
+    text-shadow:0px 1px 5px gray;
+}
+.socialLinks{
+
+}
+.FacebookLogo{
+    color:gray; background-color:rgba(255,255,255,.2);
+    border:.1px solid gray;
+     border-radius:100%; box-shadow:0px 1px 2px gray;
+    width:50px;
+    height:50px;
+    font-size:30px;
+    text-decoration:none;
+
+}
+.FacebookLogo:hover{
+    box-shadow:1px 1px 10px #4d4dff;
+    color:#4d4dff;
+
+}
+.LinkedinLogo{
+    color:gray; background-color:white; border-radius:100%; box-shadow:0px 1px 2px skyblue;
+    border:.1px solid gray;
+    width:50px;
+    height:50px;
+    font-size:30px;
+    text-decoration:none;
+
+}
+.LinkedinLogo:hover{
+    box-shadow:1px 1px 10px #0000ff;
+    color:#0000ff;
+
+}
+.GithubLogo{
+    color:gray; background-color:white; border-radius:100%; box-shadow:0px 1px 2px rgb(204, 0, 153,0.5);
+    border:.1px solid gray;
+    height:50px;
+    width:50px;
+    font-size:25px;
+    text-decoration:none;
+
+}
+.GithubLogo:hover{
+    box-shadow:1px 1px 10px rgb(204, 0, 153,.8);
+    color:rgb(204, 0, 153,.8);
+
+}
+.GmailLogo{
+    color:gray; background-color:white; border-radius:100%; box-shadow:0px 1px 2px #ff4d4d;
+    border:.1px solid gray;
+    width:50px;
+    height:50px;
+    font-size:25px;
+    text-decoration:none;
+
+}
+.GmailLogo:hover{
+    box-shadow:1px 1px 10px #ff3333;
+    color:#ff3333;
+
+}
+
+    ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .40);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+    body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+    .footer{
+        height:250px;
+
+        margin-top:80px;
+    }
+    .foot{
+        margin-top:10px;
+
+
+        margin-bottom:10px;
+    }
+    .verticalLine{
+
+
+    }
+    .verticalLine:hover{
+
+
+    }
+       .socialLinks {
+            list-style-type: none;
+    }
+    .menuFooter{
+        list-style-type: none;
+    }
+        .menu:hover{
+            text-decoration:underline;
+        }
+        .navbar{
+            font-family: "Times New Roman", Times, serif;
+            background-color: transparent;
+
+
+
+        }
+        .aa{
+
+            color:black;
+        }
+        .header1{
+            position:relative;
+            z-index:1;
+        }
+        .tr1{
+            position:absolute;
+            z-index:2;
+            top:-59%;
+            left:50%;
+        }
+        .tr2{
+            position:absolute;
+            z-index:3;
+            top:2%;
+            left:70%;
+        }
+        .tr3{
+            position:absolute;
+            z-index:4;
+            top:2%;
+            left:90%;
+        }
+    .topShow{
+    font-family: "Times New Roman", Times, serif;
+    margin-top:10px;
+    width:100%;
+
+    background: linear-gradient(110deg, rgba(33,150,243,.05) 60%, #ffed4b 60%);
+
+
+    }
+
+    .middleShow1{
+    font-family: "Times New Roman", Times, serif;
+    width:100%;
+    
+    background: #f2f5fa;
+
+    }
+    .middleShow2{
+    margin-top:50px;
+    width:100%;
+
+    background:white;
+    }
+
+    .copyright{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+    .btn1{
+        border-radius:40px;
+        padding:7px;
+        width:60%;
+
+        height:fill-parrent;
+        border:2px solid #6f9ce3;
+        color:#6f9ce3;
+    }
+    .btn1:hover{
+
+        background-color:rgba(33,150,243,.15);
+         box-shadow:inset 0 0 0 1px #2196f3;
+         color:#2196f3;
+    }
+    .btn1content{
+
+        height:440px;
+        width:40%;
+}
+    .topShow1{
+
+    }
+    .topShow2{
+
+    }
+    .aaa{ text-decoration:none;
+        color:black;
+}
+    .sloganbtn{
+         height:50px; width:140px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtn:hover{
+         background-color:rgba(33,150,243,.15);
+         box-shadow:inset 0 0 0 1px #2196f3;
+         color:#2196f3;
+
+}
+.sloganbtnyellow{
+         height:60px; width:240px; background-color:white; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.sloganbtnyellow:hover{
+         background-color:rgba(255, 255, 99,.15);
+         box-shadow:inset 0 0 0 1px #ffff63;
+         color:#bdbdb1;
+
+}
+.middleshow1-slog1{
+        padding:20px;
+        width:auto;
+
+}
+.middleshow1-slog2{
+        padding:20px;
+        width:auto;
+
+}
+.middleshow1-slog3{
+        padding:20px;
+        width:auto;
+
+}
+.middleshow1-content{
+        margin-top:60px;
+        font-family: "Times New Roman", Times, serif;
+        padding:5px;
+}
+.sliderContent{
+
+        margin-top:20px;
+        padding:5px;
+}
+.sliderMain{
+
+
+
+}
+.slider{
+
+        padding:120px;
+
+}
+.btnSlider{
+        height:50px; width:140px; background-color:transparent; border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:5px;
+         border-radius:12px;
+
+}
+.btnSlider:hover{
+         background-color:rgba(53,196,27,.15);
+         box-shadow:inset 0 0 0 1px #35c41b;
+         color:green;
+}
+.btnFeature{
+         height:40px; width:240px; background-color:transparent;
+         border:0.5px solid #b0b0b0;
+         color:black;
+         font-family: "Lucida Console", "Courier New", monospace;
+         padding:15px;
+         border-radius:42px;
+}
+.btnFeature:hover{
+         background-color:rgba(53,196,27,.25);
+         box-shadow:inset 0 0 0 1px #35c41b;
+         text-color:green;
+}
+.carousel{
+        border-bottom: 30px solid rgba(53,196,27,.55);
+        border-top: 30px solid rgba(53,196,27,.55);
+        border-radius: 8px;
+}
+.middleShow3{
+    padding:0px;
+}
+.middleShow31{
+    position:relative;
+    z-index:1;
+    background-color:rgba(23,88,4,.05);
+    padding:0px;
+}
+.middleShow311{
+    position:relative;
+    z-index:1;
+    background-color:rgba(23,88,4,.001);
+    padding:0px;
+}
+.middleImage{
+
+
+}
+.middleImageInside{
+
+}
+.middleImageInside:hover{
+
+    border-color:#009999;
+}
+.LokeshIntro{
+
+}
+
+.LokeshIntroduction2{
+    padding:30px;
+}
+.LokeshSlogan:hover{
+    text-shadow:5px 5px 5px #ffff4d;
+}
+.sug{
+
+    margin-top:50px;
+    margin_bottom:30px;
+    padding:10px;
+}
+#validationTextarea{
+    width:60%;
+}
+.mobSug{
+
+}
+.forms{
+    background-color:rgba(180,90,180,.02);
+    width:80%;
+    padding:40px;
+    border-radius:40px;
+    box-shadow:1px 5px 20px rgba(173, 173, 173,.8);
+}
+.middleShowSoft{
+
+}
+.responsive {
+  width: 100%;
+
+  height: auto;
+}
+
+
+.glow {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 7px #e60073, 0 0 10px #e60073, 0 0 15px #e60073, 0 0 6px #e60073, 0 0 9px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 6px #ff4da6, 0 0 13px #ff4da6, 0 0 20px #ff4da6, 0 0 60px #ff4da6, 0 0 17px #ff4da6, 0 0 11px #ff4da6;
+  }
+}
+.glowImg{
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  animation: glowImg 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glowImg {
+  from {
+    box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 7px #ffffb5, 0 0 10px #ffffb5, 0 0 5px #ffffb5, 0 0 16px #ffffb5, 0 0 19px #ffffb5;
+  }
+
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 6px #f7f792, 0 0 13px #f7f792, 0 0 20px #f7f792, 0 0 60px #f7f792, 0 0 17px #f7f792, 0 0 11px #f7f792;
+  }
+}
+
+.glowN {
+  font-size: 39px;
+  text-align: center;
+  animation: glowN 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glowN {
+  from {
+    color:#72f795;
+  }
+  to {
+    color:#ed4d3b;
+  }
+}
+
+</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!---Header Start--->
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home">
+        <img src="{% static 'NowOwnResume/Logo.png'%}" alt="NowResume" width="30" height="34" class="d-inline-block align-top">
+        <b>Now Resume</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active fs-4" aria-current="page" href="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="about">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Create Resume
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="basictemplate">Basic</a></li>
+            <li><a class="dropdown-item" href="attractive">Attractive</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="customized">customized</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-4" href="contactus" tabindex="-1" >Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+    {% load static %}
+    <section class="topShow">
+        <div class="row topShow1">
+
+            <div class="col-lg-6 col-sm-12  btn1content">
+                <br>
+                <br>
+                <br><br><br>
+                <br><br><br>
+               <center>  <h2 style="font-family: 'Times New Roman', Times, serif;">Create Your Resume With Yourself </h2>
+                   <h1>Make Resume Online</h1>
+               </center>
+                <br>
+                <br>
+                <center><a class="aaa" href="templates"><div class="btn1"> <b>Create Resume / Build Resume</b></div></a> </center>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 topShow2"><img src="{% static 'NowOwnResume/TopShow11.gif' %}" alt="ResumePics" style="width:420px; height:450px"></div>
+
+            </div>
+    </section>
+
+    <section class="middleShow1">
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-6 col-sm-12">
+                    <div class="img">
+                        <img src="{% static 'NowOwnResume/Hand_resume.png' %}" alt="hand" style="width:400px; height:400px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="slogan" style="padding:120px;">
+                        <h2>Create Your Resume with us</h2>
+                        <p> We have many Templates for creating attractive resume. </p>
+                        <h1>Resume maker</h1>
+                        <a href="templates"><button class="sloganbtn">Create</button></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container middleshow1-content">
+            <div class="row ">
+
+                <div class=" col-lg-4 col-sm-12">
+                    <div class="middleshow1-slog1">
+                        <img src="{% static 'NowOwnResume/Award.gif' %}" alt="Award" style="width:60px; height:100px;">
+                        <h2>Win your Job</h2>
+                        <p> You have to fill some information then <br> we will create free resume for you.<br> Take your job on your hand. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="middleshow1-slog2">
+                        <img src="{% static 'NowOwnResume/Cakes.gif' %}" alt="Cakes" style="width:100px; height:100px;">
+                        <h2>Easy To Make</h2>
+                        <p> Crack your Dream Job with free<br> Attractive Resume. Show your<br> skills , creativity with Resume.  </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="middleshow1-slog3">
+                        <img src="{% static 'NowOwnResume/Certificate.gif' %}" alt="Resume Format" style="width:150px; height:100px;">
+                        <h2>Resume format / cv format</h2>
+                        <p> Showcase your qualification on <br>your Resume. Show your various <br> Certificates , achievement with Resume. </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            </div>
+    </section>
+
+
+    <section class="middleShowSoft " style="margin-top:5px; margin-bottom:30px;">
+        <div class="row middleShow31">
+
+            <div class="col-lg-8 col-sm-12 ">
+
+                    <div class="" style="">
+               <img src="{% static 'NowOwnResume/ResumeShow (1).png' %}" alt="CV Format" class="responsive" style="">
+               <br><br>
+
+
+            </div></div>
+
+            <div class="col-lg-4 col-sm-12 topShow2">
+                <div class="LokeshIntro">
+                    <div class="LokeshIntroduction1">
+                        <div class="LokeshIntroduction2" style="color:black; font-family: 'Times New Roman', Times, serif;">
+                        <br>
+                        <br><br>
+                        <h3 class="LokeshSlogan">❝ Choose Predesigned Resume Template ❞</h3>
+                        <p>  We have lot of design for your resume. Just download it.
+                        </p>
+                            <h1>Resume examples</h1>
+                            <a href="preDesigned"><button class="sloganbtnyellow">Resume for job </button></a>
+                    </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+
+    <section class="middleShow2">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 sliderContent" >
+                    <div class="sliderContentDiv">
+                        <br><br><br><br><br>
+                        <img src="{% static 'NowOwnResume/Tr2.png'%}" alt="Triangle" width="170" height="150">
+                    </div>
+                    <h2 style="font-family: 'Times New Roman', Times, serif;">𝙲𝚑𝚘𝚘𝚜𝚎 𝚈𝚘𝚞𝚛 𝚃𝚎𝚖𝚙𝚕𝚊𝚝𝚎</h2>
+                    <img src="{% static 'NowOwnResume/Tr3.png'%}" alt="Triangle" width="170" height="150">
+                </div>
+                <div class="col-lg-6 col-sm-12 sliderMain">
+                     <div class="slider">
+                                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static 'ResumePics/resume3.png'%}" alt="Resume Template" height="450" width="390" class="d-block " alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <a href="simpleResume"><button class="btnSlider">Select this</button></a>
+
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="{% static 'ResumePics/resume2.png'%}" alt="Resume Template" height="450" width="390" class="d-block " alt="...">
+          <div class="carousel-caption d-none d-md-block">
+              <a href="basictemplates"><button class="btnSlider">Select this</button></a>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'ResumePics/resume1.png'%}" alt="Resume Template" height="450" width="390" class="d-block " alt="...">
+          <div class="carousel-caption d-none d-md-block">
+              <a href="attractive"><button class="btnSlider">Select this</button></a>
+
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="middleShowSoft " style="margin-top:5px; margin-bottom:30px;">
+        <div class="row middleShow31">
+
+            <div class="col-lg-4 col-sm-12  ">
+
+                    <div class="" style="padding:50px;">
+               <img src="{% static 'ResumePics/resume4.png' %}" alt="Free Resume Template" style="width:350px; height:420px;">
+               <br><br>
+
+
+            </div></div>
+
+            <div class="col-lg-8 col-sm-12 topShow2">
+                <div class="LokeshIntro">
+                    <div class="LokeshIntroduction1">
+                        <div class="LokeshIntroduction2" style="color:black; font-family: 'Times New Roman', Times, serif;">
+                        <br>
+                        <br><br>
+                        <h3 class="LokeshSlogan">❝ Software Engineer Template ❞</h3>
+
+                        <p>  Student of Engineering can use this template for making their Resume attractive.
+                             Include your Technical skills in Resume , Describe yourself , Show your interests and hobbies .
+                             show your Strenths , Weakness , Qualifications , Achievements.
+                        </p>
+                            <h2>How to make CV ?</h2>
+                            <h2>How to make Resume ?</h2>
+                            <a href="softwareEngg"><button class="sloganbtn">Select </button></a>
+                    </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section class="middleShow3">
+        <div class="row middleShow311">
+
+
+               <center>
+
+                   <img class="glowImg" src="{% static 'NowOwnResume/Lokesh.jpg' %}" alt="Lokesh Picture" style="width:230px; height:250px; border-radius:100%;">
+
+                   <br><br>
+                   <p class="glow" style="">𝐋𝐨𝐤𝐞𝐬𝐡 𝐊𝐞𝐞𝐫<br>(𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫)</p>
+
+               </center>
+            </div>
+
+    </section>
+
+
+
+<section class="my-4"  >
+<div class="card text-center" >
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body" style="background-color:rgba(33,100,213,.05);">
+    <h2 class="card-title glowN">New </h2>
+    <p class="card-text">Create Resume with New Template </p>
+    <a href="templates" class="btn border border-3 btnFeature">Create</a>
+  </div>
+  <div class="card-footer text-muted">
+    1 days ago
+  </div>
+</div>
+</section>
+
+
+
+
+    <div class="row sug ">
+    <div class="container">
+    <center>
+    <form class="forms" action="index" method="post"> {% csrf_token %}
+    <h3 style="text-decoration:underline;">Suggestions</h3>
+
+  <br>
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3 ">
+      <label for="validationServer01" style="float:left;">Full Name</label>
+      <input type="text" class="form-control" id="validationServer01" name="name" placeholder="Enter Name" required>
+
+  <br>
+
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationServer02" style="float:left;">Email</label>
+      <input type="email" class="form-control" id="validationServer02" name="email" placeholder="Enter Email" required>
+
+    </div>
+       <br>
+
+  </div>
+
+ <br>
+  <div class="col-md-6 mb-3 mobSug">
+      <label for="validationTextarea" style="float:left;">Mobile No:-</label>
+      <input type="tel" class="form-control " name="mobile" style="width:60%;"  id="validationServer05" placeholder="Enter Mobile No." required>
+    </div>
+ <br>
+
+
+
+
+    <div class="col-md-6 mb-3">
+    <label for="validationTextarea" style="float:left;">Suggestions</label>
+    <textarea class="form-control" name="suggestion" id="validationTextarea" placeholder="" required></textarea>
+
+  </div>
+ <br>
+  <br>
+  <br>
+  <button class="sloganbtn" type="submit" >Send</button>
+</form>
+        </center>
+    </div>
+</div>
+
+    <script>
+{% if thank %}
+alert('Thanks for Your Suggestion');
+
+{% endif %}
+</script>
+</div>
+
+<footer class="footer">
+    <div class="container foot">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 ">
+                <div class="row">
+
+                <div class="logo" style="position:relative; margin-top:40px;">
+
+                    <img src="{% static 'NowOwnResume/Logo_Footer.gif'%}" alt="Website Logo" style="position:absolute; right:90%; top:-32%;" width="120" height="160">
+                    <h4 style="font-family: Georgia, serif;">𝙽𝚘𝚠 𝚁𝚎𝚜𝚞𝚖𝚎</h4>
+                    <h4 style="font-family: 'Brush Script MT', cursive;">Show yours skills with NowResume</h4>
+                </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-12 verticalLine">
+                <div class="row" style="margin-top:20px;">
+                    <h2>▶</h2>
+                    <ul class="menuFooter">
+                        <li><a href="basictemplates" class="FooterLinks">𝙱𝚊𝚜𝚒𝚌 𝚁𝚎𝚜𝚞𝚖𝚎</a></li>
+                        <li><a href="attractive" class="FooterLinks">𝙰𝚝𝚝𝚛𝚊𝚌𝚝𝚒𝚟𝚎 𝚁𝚎𝚜𝚞𝚖𝚎</a></li>
+                        <li><a href="softwareEngg" class="FooterLinks">𝚂𝚘𝚏𝚝𝚠𝚊𝚛𝚎 𝙴𝚗𝚐𝚒𝚗𝚎𝚎𝚛</a></li>
+                        <li><a href="simpleResume" class="FooterLinks">𝚂𝚒𝚖𝚙𝚕𝚎 𝚁𝚎𝚜𝚞𝚖𝚎</a></li>
+                        <li><a href="customized" class="FooterLinks">𝙲𝚞𝚜𝚝𝚘𝚖𝚒𝚣𝚎𝚍 𝚁𝚎𝚜𝚞𝚖𝚎</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 verticalLine " style="margin-top:60px;">
+                <div class="row"><a href="contactus" class="FooterContactUs FooterLinks">𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝚄𝚜</a></div>
+                <div class="row "><a href="about" class="FooterLinks">𝙰𝚋𝚘𝚞𝚝 𝚄𝚜</a></div>
+                <div class="row" style="margin-top:60px; "><a class="FooterLink" href="donate" style="border:.8px solid gray; border-radius:5px; width:auto;">𝙵𝚘𝚛 𝙳𝚘𝚗𝚊𝚝𝚒𝚘𝚗</a></div>
+                <div class="row" style="margin-top:10px; "><a class="FooterLink" href="suggestions" style="border:.8px solid gray; border-radius:5px; width:auto;">Suggestions</a></div>
+
+            </div>
+            <div class="col-md-3 col-sm-12 verticalLine" style="margin-top:40px;">
+                <div class="socialLink row">
+                    𝚂𝚘𝚌𝚒𝚊𝚕 𝙼𝚎𝚍𝚒𝚊 𝙻𝚒𝚗𝚔
+                    <div class="Social">
+                <div class="socialLinks col-lg-3 col-sm-12">
+
+                    <button class="FacebookLogo" style="margin:2px;">𝗳</button>
+                </div>
+                        <div class="socialLinks col-lg-3 col-sm-12">
+                    <button class="LinkedinLogo" style="margin:2px;">in</button>
+                </div>
+                <div class="socialLinks col-lg-3 col-sm-12">
+
+                    <button class="GithubLogo" style="margin:2px;">Git</button>
+                </div>
+                <div class="socialLinks col-lg-3 col-sm-12">
+                    <button class="GmailLogo" style="margin:2px;">G+</button>
+                </div>
+                        </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="row my-4">
+            <center><b>𝙲𝚘𝚙𝚢𝚛𝚒𝚐𝚑𝚝 © 𝙽𝚘𝚠𝚁𝚎𝚜𝚞𝚖𝚎 𝟸𝟶𝟸𝟷</b></center>
+        </div>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+{% block js %}{% endblock %}

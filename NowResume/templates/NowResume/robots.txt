@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://NowResume.com/sitemap.xml
